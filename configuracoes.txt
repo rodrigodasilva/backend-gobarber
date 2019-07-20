@@ -164,3 +164,62 @@ Dependências adicionadas no decorrer do projeto
     > yarn add jsonwebtoken
   # Validação dos dados
     > yarn add yup
+  # Trabalhar com datas - @next para instalar a versão atual
+    > yarn add date-fns@next
+
+
+Configurando o Multer
+  1 - Adiciona sua dependencias
+    > yarn add Multer
+  2 - Cria uma pasta 'tmp' e dentro dela outra chamada 'uploads' para armazenar
+    os arquivos
+  3 - Cria um arquivo de configuração 'multer.js' na pasta 'config'
+
+
+
+
+Configurando o MongoDB
+  1 - Subimos a imagem do MongoDB no Docker
+    > docker run --name mongobarber -p 27017:27017 -d -t mongo
+  2 - Adiciona a dependencia do 'mongoose' ao projeto
+    > yarn add mongoose
+  3 - Realiza as configurações no arquivo 'index.js' na pasta 'database'
+
+  -> Instalar o 'MongoDB Compass' no computador para visualização dos dados numa interface
+
+Configurando o Nodemailer
+  1 - > yarn add nodemailer
+  2 - Cria um arquivo 'mail.js' na pasta 'config'
+  3 - Cria uma conta no serivo 'Mail Trap' para envio dos emails e adiciona os dados de usuario no arquivo citado anteriormente
+  4 - Cria uma pasta 'lib' na raiz do projeto com o arquivo 'Mail.js'
+  5 - Envia o email atraves do 'AppointmentController'
+
+  => Libs para templates de email
+    > yarn add express-handlebars nodemailer-express-handlebars
+
+Configurando o Redis
+  1 - Inicia no docker
+    > docker run --name redisbarber -p 6379:6379 -d -t redis:alpine
+  2 - Adiciona o 'bee-queue', que é uma ferramenta de fila para o node
+    > yarn add bee-queue
+  3 - Na pasta 'lib' cria um arquivo 'Queue.js'
+
+
+Tratamento de exceções erros
+  1 - Cria uma conta no 'Sentry' e cria um projeto node ou express
+  2 - Faz a inicialização conforme mostra a documentação
+  3 - Adiciona a lib 'express-async-errors'
+    > yarn add express-async-errors
+  4 - Lib para tratativa das mensagens de erro
+    > yarn add youch
+
+Configurando as variaveis ambiente
+  1 - Cria o arquivo '.env' na raiz do projeto para armazenar essas informações
+  2 - Adiciona ao '.gitignore'
+  4 - Adiciona as variaveis ao arquivo '.env'
+  5 - Adiciona a lib 'dotenv' ao projeto
+    > yarn add dotenv
+  6 - Faz a importação nos arquivos 'src/queue.js', 'src/app.js' e 'database.js'
+    e realiza a substituição nos lugares necessários
+
+  7 - cria um arquivo '.env.example' igual ao '.env', mas sem os valores mais sensiveis
