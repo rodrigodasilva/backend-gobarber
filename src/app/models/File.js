@@ -9,7 +9,9 @@ class File extends Model {
         url: {
           type: Sequelize.VIRTUAL,
           get() {
-            return `${process.env.APP_URL}/files/${this.path}`;
+            // return `${process.env.APP_URL}/files/${this.path}`;
+            // Returno para o emulador Genymotion
+            return `http://10.0.3.2:3333/files/${this.path}`;
           },
         },
       },
