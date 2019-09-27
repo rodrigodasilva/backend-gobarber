@@ -110,7 +110,7 @@ Depois de configurada as variavéis de ambiente e, tendo o postgres, o mongodb e
 
    > yarn queue
 
-### Rotas
+## Rotas
 
 Se tudo ocorreu bem até aqui significa que a api está rodando, sendo assim podemos testar suas funcionalidades. Os tópicos seguintes descrevem as rotas fornecidas pela api e detalha como realizar a requisição de cada uma delas.
 
